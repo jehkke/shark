@@ -5,6 +5,8 @@
 #define N_COINPOS          12
 #define MAX_COIN            4
  
+#define SHARK_INITPOS 
+#definevMAX_SHARK
 // board_어쩌고로 이름짓는것 board에 해당한다는것을 뜻하게 이름짓는겨 
 static board_status[N_BOARD]; //live or die // 15칸이 정의됨. 
 static board_coin[N_BOARD];
@@ -67,8 +69,18 @@ int board_getBoardCoin (int pos);
 
 
 
-//int board_getSharkPosition(void);
-//int board_stepShark(void);
-
+//int board_getSharkPosition(void);//상어의 초기위치( 출발점보다 좀 더 뒤에서 출발) 
+int board_stepShark(void)
+{
+	int steo = rnad()%MAX_SHARKSTEP +1;
+	int i;
+	for (i=shark_position+1;i<=shark_position+step;i++)
+	{
+		board_status[i]= BOARDSTATUS_NOK
+	}
+	shark_positio +=step;
+	
+	retuern shark_position +=
+}
 
 
